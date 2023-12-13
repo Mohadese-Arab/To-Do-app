@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="icon" href="images/unnamed.png">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="d-flex align-center justify-center">
+    <article class="app-container d-flex justify-between align-start">
+      <section id="toDoTasksWrapper" class="d-grid">
+        <h2 class="text-center today"></h2>
+        <div class="toDoForm d-grid">
+          <input type="text" id="taskInput" placeholder="Write Your Task ..." autocomplete="off" />
+          <button type="submit" id="addBtn">Add</button>
+          <button type="button" id="editBtn">Edit</button>
+        </div>
+        <ul id="tasksList" class="list"></ul>
+      </section>
+      <section id="doneTasksWrapper" class="d-grid">
+        <h2 class="text-center">Done Tasks</h2>
+        <ul id="doneTasksList"></ul>
+      </section>
+    </article>
+
+    <!---- JavaScript ---->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

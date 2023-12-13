@@ -1,0 +1,242 @@
+@import url("font.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url('../images/night.jpg') no-repeat fixed center / cover;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.app-container {
+    width: 1000px;
+}
+
+.app-container section {
+    background-color: #ffffff37;
+    backdrop-filter: blur(8px);
+    height: 500px;
+    width: 40%;
+    grid-template-rows: auto auto 1fr;
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 3px #333;
+}
+
+.app-container section#doneTasksWrapper {
+    grid-template-rows: auto 1fr;
+}
+
+.app-container section h2 {
+    font-family: 'ShowUp', sans-serif;
+    font-size: 27px;
+    color: #fff;
+    text-shadow: 0 0 10px #9af6ff;
+}
+
+section .toDoForm {
+    background-color: #ffffffc9;
+    width: 100%;
+    height: 40px;
+    grid-template-columns: 1fr auto;
+    margin: 8px 0;
+    border-radius: 20px;
+    position: relative;
+}
+
+.toDoForm input {
+    background-color: transparent;
+    font-family: "Strawberry", sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding-left: 16px;
+    border: none;
+    outline: none;
+}
+
+#addBtn {
+    background-color: #021b77;
+    width: 90px;
+    font-family: "Strawberry", sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-shadow: 0 0 3px #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#addBtn:hover {
+    box-shadow: 0 0 10px 5px #021b77;
+}
+
+#editBtn {
+    background-color: #0095ff;
+    width: 90px;
+    height: 40px;
+    font-family: "Strawberry", sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-shadow: 0 0 3px #fff;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    scale: 0;
+    transition: 0.3s;
+}
+
+#editBtn:hover {
+    box-shadow: 0 0 10px 5px #0095ff;
+}
+
+.app-container section ul {
+    width: 100%;
+    list-style-type: none;
+    border-radius: 18px;
+}
+
+ul li {
+    background-color: #ffffffc2;
+    height: 38px;
+    font-family: "Strawberry", sans-serif;
+    font-size: 18px;
+    color: #333;
+    padding: 14px;
+    padding-right: 3px;
+    margin-top: 8px;
+    border-radius: 19px;
+    transition: 0.3s;
+}
+
+ul li i {
+    background-color: gray;
+    font-size: 13px;
+    color: #fff;
+    padding: 9px;
+    margin-left: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul li i.deleteBtn:hover {
+    background-color: rgb(255, 34, 0);
+}
+
+ul li i.editBtn:hover {
+    background-color: #0095ff;
+}
+
+ul li i.checkBtn:hover {
+    background-color: rgb(0, 128, 68);
+}
+
+ul li i.undoBtn:hover {
+    background-color: orange;
+}
+
+/* scroll style */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffffb8;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+/* ---- Responsive style ---- */
+/* -- Mobile size -- */
+@media (max-width : 480px) {
+    body {
+        height: auto;
+    }
+
+    .app-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .app-container section {
+        width: 85%;
+    }
+}
+
+/* -- Mobile landscape size -- */
+@media (min-width : 481px) and (max-width : 767px) {
+    body {
+        height: auto;
+    }
+
+    .app-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .app-container section {
+        width: 55%;
+    }
+}
+
+/* -- Tablet size -- */
+@media (min-width : 768px) and (max-width : 1024px) {
+    body {
+        height: auto;
+    }
+
+    .app-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    .app-container section {
+        width: 60%;
+    }
+}
